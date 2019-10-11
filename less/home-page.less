@@ -1,17 +1,17 @@
 // Home Content
 
 .home {
-
   .intro {
-
+    .header-img {
+      max-width: 100%;
+    }
     h2 {
       padding: 15px;
     }
 
     p {
-      padding:0 15px;
+      padding: 0 15px;
     }
-  
   }
 
   .space-images {
@@ -58,13 +58,16 @@
       }
 
       .btn {
+        .btn( @btn-bg-color, @wild-sand);
+        padding: 5px 25px;
+        border-radius: 5px;
       }
     }
 
     .walk-img {
       width: 46%;
       margin-left: 4%;
-      
+
       img {
         width: 100%;
         height: auto;
@@ -72,4 +75,4 @@
       }
     }
   }
-}// home
+} // home

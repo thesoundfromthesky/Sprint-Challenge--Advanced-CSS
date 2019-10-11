@@ -130,6 +130,10 @@ a {
   text-decoration: none;
   color: #000;
 }
+button {
+  outline: none;
+  border: none;
+}
 * {
   box-sizing: border-box;
 }
@@ -164,6 +168,12 @@ p {
 }
 a {
   font-size: 1.6rem;
+  cursor: pointer;
+}
+button {
+  font-size: 2.3rem;
+  cursor: pointer;
+  background-color: #fff;
 }
 .container {
   max-width: 800px;
@@ -191,6 +201,9 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.home .intro .header-img {
+  max-width: 100%;
 }
 .home .intro h2 {
   padding: 15px;
@@ -233,6 +246,19 @@ footer {
 }
 .home .walk .walk-text p {
   margin-bottom: 26px;
+}
+.home .walk .walk-text .btn {
+  background-color: #22283A;
+  color: #F6F6F6;
+  transition-property: background-color, color;
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  padding: 5px 25px;
+  border-radius: 5px;
+}
+.home .walk .walk-text .btn:hover {
+  background-color: #000000;
+  color: #81848E;
 }
 .home .walk .walk-img {
   width: 46%;
