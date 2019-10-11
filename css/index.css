@@ -134,6 +134,23 @@ button {
   outline: none;
   border: none;
 }
+@keyframes bg {
+  0% {
+    filter: grayscale(100%) blur(5px) brightness(20%) drop-shadow(8px 8px 10px gray);
+  }
+  25% {
+    filter: grayscale(80%) blur(3px) brightness(30%) drop-shadow(8px -8px 10px gray);
+  }
+  50% {
+    filter: grayscale(40%) blur(2px) brightness(60%) drop-shadow(-8px -8px 10px gray);
+  }
+  75% {
+    filter: grayscale(20%) blur(1px) brightness(80%) drop-shadow(-8px 8px 10px gray);
+  }
+  100% {
+    filter: grayscale(0%) blur(0px) brightness(100%) drop-shadow(8px 8px 10px gray);
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -180,6 +197,12 @@ button {
   width: 100%;
   margin: 0 auto;
 }
+body {
+  background-image: linear-gradient(189deg, #22c1c3 0%, #59c09e 29%, #96be74 46%, #d1bc4b 77%, #fdbb2d 100%);
+}
+body {
+  padding-top: 80px;
+}
 .navbar {
   display: flex;
   flex-direction: column;
@@ -188,6 +211,15 @@ button {
   background-color: #f6f6f6;
   color: #454a59;
   height: 80px;
+  position: fixed;
+  z-index: 1;
+  opacity: 0.8;
+  width: 100%;
+  top: 0;
+  transition: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.navbar:hover {
+  opacity: 1;
 }
 .navbar .nav-item {
   padding: 0 15px;
@@ -204,6 +236,7 @@ footer {
 }
 .home .intro .header-img {
   max-width: 100%;
+  animation: bg 5s alternate infinite cubic-bezier(0.55, 0.085, 0.68, 0.53);
 }
 .home .intro h2 {
   padding: 15px;
