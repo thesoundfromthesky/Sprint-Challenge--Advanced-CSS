@@ -1,1 +1,26 @@
 // Mixins Here
+
+.d-flex(@flex-direction:row) {
+  display: flex;
+  flex-direction: @flex-direction;
+}
+
+.btn(@bg, @color, @hover:true) {
+  background-color: @bg;
+  color: @color;
+
+  transition-property: background-color, color;
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+  &:hover when (@hover=true) {
+    background-color: darken(@bg, 20%);
+    color: @waterloo;
+  }
+}
+
+.media (@content) {
+  @media @phone {
+    @content();
+  }
+}
